@@ -1,0 +1,25 @@
+﻿@model Lab1_MontenegroMonzón_1229918.Models.Game
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Vista1</title>
+</head>
+<body>
+    <div>
+        <label>Nombre: @Model.nombre<br /></label>
+        <label>ID: @Model.Id<br /></label>
+        <label>Estudio: @Model.estudio<br /></label>
+        <label>Puntuación: @Model.puntuacion<br /></label>
+        <label>Categoría: @Model.categoria<br /></label>
+        <label>Resultado en que tarde la operación: @Model.resultadoTiempo<br /></label>
+        <label>Tiempo PID: @Model.resultadoTiempoPID</label>
+    </div>
+</body>
+</html>

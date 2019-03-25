@@ -1,0 +1,21 @@
+﻿@model Lab2_1229918.Models.Empleados
+
+@{
+    ViewBag.Title = "buscar";
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>mostrar</title>
+</head>
+<body>
+    <div>
+        <form action="busqueda" method="post">
+            <p>INGRESE EL ID DEL EMPLEADO A BUSCAR</p>
+            <label>ID: <input type="number" name="id" value=" " /></label><br />
+            <label>Nombre: <input type="text" name="nombre" value=" " /></label><br />
+            <input type="submit" name="enviar" value="Enviar" />
+        </form>
+    </div>
+</body>
+</html>

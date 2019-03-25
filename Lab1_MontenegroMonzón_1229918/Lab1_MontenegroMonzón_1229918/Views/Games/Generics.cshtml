@@ -1,0 +1,26 @@
+﻿@model Lab1_MontenegroMonzón_1229918.Models.LInfo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Generics</title>
+</head>
+<body>
+    <div>
+        <label>Nombre: @Model.nombre<br /></label>
+        <label>ID: @Model.Id<br /></label>
+        <label>Estudio: @Model.estudio<br /></label>
+        <label>Puntuación: @Model.puntuacion<br /></label>
+
+        <form action="MostrarJuego2" method="post">
+            <input type="submit" name="enviar" value="Agregar más elementos a la lista" />
+        </form>
+    </div>
+</body>
+</html>

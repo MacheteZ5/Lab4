@@ -1,0 +1,26 @@
+﻿@model Lab1_MontenegroMonzón_1229918.Models.Game
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Mostrar</title>
+</head>
+<body>
+    <div>
+        <h3>Datos de los Juegos</h3>
+        <form action="Generics" method="post">
+            <label>Nombre: <input type="text" name="nombre" value=" " /></label><br />
+            <label>ID: <input type="text" name="id" value=" " /></label><br />
+            <label>Estudio: <input type="text" name="estudio" value=" " /></label><br />
+            <label>Puntuacion: <input type="text" name="puntuacion" value=" " /></label><br />
+            <input type="submit" name="enviar" value="Enviar" />
+        </form>
+    </div>
+</body>
+</html>

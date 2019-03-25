@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Lab2_1229918.Models.Empleados>
+
+@{
+    ViewBag.Title = "ListaEnlazada";
+}
+
+<h2>INFORMACION EMPLEADOS</h2>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Vista1</title>
+</head>
+<body>
+    <div>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.horas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.citas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.entrada)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.salida)
+                </th>
+            </tr>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.horas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.citas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.entrada)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.salida)
+                </td>
+            </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
+
+<div>
+    <form action="mostrar" method="post">
+        <input type="submit" name="enviar" value="Agregar más elementos a la lista" />
+    </form>
+
+    <form action="apilar" method="post" aling="right">
+        <input type="submit" name="enviar" value="Agregar a la pila y a la cola" />
+    </form>
+    <form action="buscar" method="post" aling="right">
+        <input type="submit" name="enviar" value="Buscar empleado" />
+    </form>
+</div>

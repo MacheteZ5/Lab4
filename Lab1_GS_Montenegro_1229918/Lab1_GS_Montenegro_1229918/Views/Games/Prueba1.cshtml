@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Lab1_GS_Montenegro_1229918.Models.Game>
+@{
+    ViewBag.Title = "Prueba1";
+}
+
+<h2>Prueba1</h2>
+
+<table class="Tabla">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.categoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.año)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estudio)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.categoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.año)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.estudio)
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Lab1_Montenegro_1229918.Models.Game>
+@{
+    ViewBag.Title = "Mostrarses";
+}
+<h2>Mostrarses</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.categoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estudio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.puntuacion)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.categoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.estudio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.puntuacion)
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Lab2_1229918.Models.Empleados>
+
+@{
+    ViewBag.Title = "Cola";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AgregarALaCola</title>
+</head>
+<body>
+    <div>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.horas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.citas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.entrada)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.salida)
+                </th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.horas)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.citas)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.entrada)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.salida)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
